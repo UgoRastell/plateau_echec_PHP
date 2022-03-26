@@ -13,141 +13,65 @@
             $element = "<div></div>";
             $nbDiv = 0;
 
-            while($nbDiv <= 7)
-            {
-                if($nbDiv % 2 == 0)
-                    {
-                        $element = "<div class=black></div>";
-                        echo "$element";
-                        ++$nbDiv;
-                    }
-
-                    else
-                    {
-                        $element = "<div class=white></div>";
-                        echo"$element";
-                        ++$nbDiv;
-                    }
-            }   
-
-            while($nbDiv <= 15)
-            {
-                if($nbDiv % 2 == 0)
-                    {
-                        $element = "<div class=white></div>";
-                        echo "$element";
-                        ++$nbDiv;
-                    }
-
-                    else
-                    {
-                        $element = "<div class=black></div>";
-                        echo"$element";
-                        ++$nbDiv;
-                    }
-            }
-
-            while($nbDiv <= 23)
-            {
-                if($nbDiv % 2 == 0)
-                    {
-                        $element = "<div class=black></div>";
-                        echo "$element";
-                        ++$nbDiv;
-                    }
-
-                    else
-                    {
-                        $element = "<div class=white></div>";
-                        echo"$element";
-                        ++$nbDiv;
-                    }
-            }
-
-            while($nbDiv <= 31)
-            {
-                if($nbDiv % 2 == 0)
-                    {
-                        $element = "<div class=white></div>";
-                        echo "$element";
-                        ++$nbDiv;
-                    }
-
-                    else
-                    {
-                        $element = "<div class=black></div>";
-                        echo"$element";
-                        ++$nbDiv;
-                    }
-            }
-
-            while($nbDiv <= 39)
-            {
-                if($nbDiv % 2 == 0)
-                    {
-                        $element = "<div class=black></div>";
-                        echo "$element";
-                        ++$nbDiv;
-                    }
-
-                    else
-                    {
-                        $element = "<div class=white></div>";
-                        echo"$element";
-                        ++$nbDiv;
-                    }
-            }
-
-            while($nbDiv <= 47)
-            {
-                if($nbDiv % 2 == 0)
-                    {
-                        $element = "<div class=white></div>";
-                        echo "$element";
-                        ++$nbDiv;
-                    }
-
-                    else
-                    {
-                        $element = "<div class=black></div>";
-                        echo"$element";
-                        ++$nbDiv;
-                    }
-            }
-            
-            while($nbDiv <= 55)
-            {
-                if($nbDiv % 2 == 0)
-                    {
-                        $element = "<div class=black></div>";
-                        echo "$element";
-                        ++$nbDiv;
-                    }
-
-                    else
-                    {
-                        $element = "<div class=white></div>";
-                        echo"$element";
-                        ++$nbDiv;
-                    }
-            }
-
             while($nbDiv <= 63)
             {
+                if($nbDiv <= 7)
+                {
+                    $color1 ="black";
+                    $color2="white";
+                }
+                elseif($nbDiv <= 15)
+                {
+                    $color1 ="white";
+                    $color2="black";
+                }
+                elseif($nbDiv <= 23)
+                {
+                    $color1 ="black";
+                    $color2="white";
+                }
+                elseif($nbDiv <= 31)
+                {
+                    $color1 ="white";
+                    $color2="black";
+                }
+                elseif($nbDiv <= 39)
+                {
+                    $color1 ="black";
+                    $color2="white";
+                }
+                elseif($nbDiv <= 47)
+                {
+                    $color1 ="white";
+                    $color2="black";
+                }
+                elseif($nbDiv <= 55)
+                {
+                    $color1 ="black";
+                    $color2="white";
+                }
+                elseif($nbDiv <= 63)
+                {
+                    $color1 ="white";
+                    $color2="black";
+                }
+                
                 if($nbDiv % 2 == 0)
                     {
-                        $element = "<div class=white></div>";
-                        echo "$element";
+                        $element = "<div class=$color1></div>";
+                        echo"$element";
                         ++$nbDiv;
+                        ++$color2;
+                        ++$color1;
                     }
-
-                    else
+                    elseif($nbDiv % 2 == 1)
                     {
-                        $element = "<div class=black></div>";
+                        $element = "<div class=$color2></div>";
                         echo"$element";
                         ++$nbDiv;
                     }
-            }
+
+            }   
             
             ?>
     </div>
